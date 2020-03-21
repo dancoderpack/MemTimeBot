@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: cp1251 -*-
 import users_data_controller
 import bot_log_controller
 import vk_utils

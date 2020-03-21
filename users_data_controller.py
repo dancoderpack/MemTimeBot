@@ -1,15 +1,15 @@
-# -*- coding: utf-8 -*-
+# -*- coding: cp1251 -*-
 import json
 import bot_log_controller
 import config
 
 
-# Р’РѕР·РІСЂР°С‰Р°РµС‚ РІСЃРµС… РЅР°С€РёС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РєРѕС‚РѕСЂС‹Рµ С…СЂР°РЅСЏС‚СЃСЏ РІ С„Р°Р№Р»Рµ <users.json>
+# Возвращает всех наших пользователей, которые хранятся в файле <users.json>
 def get_users():
     return json.load(open(config.USERS_JSON_PATH, 'r'))
 
 
-# РћР±РЅРѕРІР»СЏРµС‚ С„Р°Р№Р» <users.json> РёР·РјРµРЅСЏСЏ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+# Обновляет файл <users.json> изменяя конфигурацию пользователя
 def update_user(user_id, interval=-1, counter=-1, chat_id=""):
     users = get_users()
     user = {}
@@ -25,18 +25,18 @@ def update_user(user_id, interval=-1, counter=-1, chat_id=""):
     open(config.USERS_JSON_PATH, 'w').write(json.dumps(users))
 
 
-# РР·РјРµРЅСЏРµС‚ РёРЅС‚РµСЂРІР°Р» РѕС‚РїСЂР°РІРєРё РјРµРјРѕРІ РґР»СЏ РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+# Изменяет интервал отправки мемов для конкретного пользователя
 def change_user_interval(user_id, interval):
     update_user(user_id, interval)
     bot_log_controller.log_change_user_interval(user_id, interval)
 
 
-# РР·РјРµРЅСЏРµС‚ СЃС‡РµС‚С‡РёРє РјРµРјРѕРІ РґР»СЏ РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+# Изменяет счетчик мемов для конкретного пользователя
 def change_user_counter(user_id):
     update_user(user_id, counter=get_counter_value(user_id) + 1)
 
 
-# Р”РѕР±Р°РІР»СЏРµС‚ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РІ С„Р°Р№Р» <users.json>
+# Добавляет нового пользователя в файл <users.json>
 def add_user_if_needed(user_id, chat_id):
     if user_id not in get_users():
         update_user(user_id, 0, 0, chat_id)

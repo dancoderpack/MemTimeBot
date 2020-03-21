@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: cp1251 -*-
 # Token Telegram бота
 TOKEN = "1148282016:AAE9WBxSHXzEG30H7w2utMM6JF4ew2ALo6o"
 
