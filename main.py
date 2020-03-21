@@ -52,7 +52,7 @@ def on_message_received(message):
             users_data_controller.add_user_if_needed(user_id, chat_id)
             users_data_controller.change_user_interval(user_id, interval)
             bot.send_message(chat_id,
-                             config.INTERVAL_SET_MESSAGE.format(end_of_every, msg_text[2:]),
+                             config.INTERVAL_SET_MESSAGE.format(end_of_every, msg_text[0:]),
                              parse_mode='html',
                              reply_markup=init_default_keyboard())
         # Если пользователь запросил новый мем
