@@ -47,9 +47,7 @@ def on_message_received(message):
         elif "минут" in msg_text:
             print(msg_text)
             print(msg_text[2:4])
-            print(msg_text[2:4].encode('utf-8'))
             print(int(msg_text[2:4]))
-            print(int(msg_text.encode('utf-8')[2:4]))
             interval = int(msg_text[2:4])
             end_of_every = "ые"
             if interval == 1:
