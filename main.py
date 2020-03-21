@@ -45,10 +45,7 @@ def on_message_received(message):
                              reply_markup=init_intervals_keyboard())  # Клавиатура
         # Если пользователь задал новый интервал отправки мемов
         elif "минут" in msg_text:
-            print(msg_text)
-            print(msg_text[2:4])
-            print(int(msg_text[2:4]))
-            interval = int(msg_text[2:4])
+            interval = int(msg_text[0:2])
             end_of_every = "ые"
             if interval == 1:
                 end_of_every = "ую"
@@ -94,7 +91,7 @@ def init_intervals_keyboard():
     # Инициализация markup
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     # Добавление кнопок в markup
-    emojis = ['🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖']
+    # emojis = ['🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖']
     # Итератор для эмодзи
     iterator = 0
     for interval in config.INTERVALS:
@@ -104,7 +101,7 @@ def init_intervals_keyboard():
         elif interval == 3:
             minutes_string = "минуты"
         # Добавляем новую кнопку в markup
-        markup.add(types.KeyboardButton("{0} {1} {2}".format(emojis[iterator], interval, minutes_string)))
+        markup.add(types.KeyboardButton("{1} {2}".format(interval, minutes_string)))
         # Увеличиваем итератор
         iterator += 1
     # Возвращаем markup

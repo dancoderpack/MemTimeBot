@@ -23,10 +23,10 @@ GROUPS = [-135209264]  # Бот Максим
 INTERVALS = [1, 3, 5, 10, 15, 30, 60]
 
 # Путь до user.json
-USERS_JSON_PATH = "/home/dancoder/MemTimeBot/users.json"
+USERS_JSON_PATH = "users.json"
 
 # Путь до папки стикеров
-PATH_STICKERS = "/home/dancoder/MemTimeBot/stickers/"
+PATH_STICKERS = "stickers/"
 
 # Стикеры
 WELCOME_STICKER = PATH_STICKERS + "dancing_bird.tgs"  # Стикер с танцующей птицей
