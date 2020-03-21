@@ -115,7 +115,7 @@ def send_mem(chat_id, user_id):
             bot.send_photo(chat_id, url)
             bot_log_controller.log_send_mem(user_id, url)
         except Exception:
-            print("Произошла ошибка для пользователя " + user_id)
+            print("Error with <" + user_id + ">")
     else:
         send_mem(chat_id, user_id)
 
