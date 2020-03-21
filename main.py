@@ -36,7 +36,7 @@ def on_message_received(message):
     if message.chat.type == 'private':
         # Получаем идентификатор чата, с которого пришло сообщение
         chat_id = message.chat.id
-        msg_text = message.text.encode('utf-8')
+        msg_text = message.text
         user_id = message.chat.username
         # Если пользователь отправил "Начать" или "Изменить интервал отправки мемов"
         if msg_text == config.START_KEYBOARD_BUTTON or msg_text == config.DEFAULT_KEYBOARD_BUTTON_2:
