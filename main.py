@@ -45,6 +45,7 @@ def on_message_received(message):
                              reply_markup=init_intervals_keyboard())  # Клавиатура
         # Если пользователь задал новый интервал отправки мемов
         elif "минут" in msg_text:
+            print(msg_text)
             print(msg_text[2:4])
             print(msg_text[2:4].encode('utf-8'))
             print(int(msg_text[2:4]))
