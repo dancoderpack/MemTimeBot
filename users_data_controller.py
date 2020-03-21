@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 import json
 import bot_log_controller
+import config
 
 
 # Возвращает всех наших пользователей, которые хранятся в файле <users.json>
 def get_users():
-    return json.load(open('users.json', 'r'))
+    return json.load(open(config.USERS_JSON_PATH, 'r'))
 
 
 # Обновляет файл <users.json> изменяя конфигурацию пользователя
@@ -21,7 +22,7 @@ def update_user(user_id, interval=-1, counter=-1, chat_id=""):
     if chat_id != "":
         user['chat_id'] = chat_id
     users[user_id] = user
-    open('users.json', 'w').write(json.dumps(users))
+    open(config.USERS_JSON_PATH, 'w').write(json.dumps(users))
 
 
 # Изменяет интервал отправки мемов для конкретного пользователя
