@@ -111,8 +111,11 @@ def init_intervals_keyboard():
 def send_mem(chat_id, user_id):
     url = vk_utils.get_mem(user_id)
     if url != "":
-        bot.send_photo(chat_id, url)
-        bot_log_controller.log_send_mem(user_id, url)
+        try:
+            bot.send_photo(chat_id, url)
+            bot_log_controller.log_send_mem(user_id, url)
+        except Exception:
+            print("Произошла ошибка для пользователя " + user_id)
     else:
         send_mem(chat_id, user_id)
 
