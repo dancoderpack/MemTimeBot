@@ -19,7 +19,7 @@ def send_welcome_message(message):
     # Отправка сообщения "Ну привет, <Имя пользователя>))"
     bot.send_message(message.chat.id,  # В какой чат отправить сообщение
                      # Какое сообщение
-                     config.WELCOME_MESSAGE.decode('cp1251').format(message.from_user).decode('cp1251'),
+                     "Привет!",
                      # Как форматировать строку
                      parse_mode='html',
                      # Подключаем клавиатуру
