@@ -145,6 +145,6 @@ def threaded_function():
 
 
 # Запуск бота
-print("Bot successful started!")
+print("Бот успешно запущен!")
 start_repeat_thread()
 bot.polling(none_stop=True)
