@@ -16,9 +16,6 @@ WELCOME_MESSAGE = "Ну привет, <b>{0.first_name}</b>!)))"
 START_MESSAGE = "Как часто мне присылать тебе мемы? Через..."
 INTERVAL_SET_MESSAGE = "Отлично! Буду присылать тебе мем кажд{0} <b>{1}</b>"
 
-# Стикеры
-WELCOME_STICKER = "stickers/dancing_bird.tgs"  # Стикер с танцующей птицей
-
 # Идентификаторы пабликов
 GROUPS = [-135209264]  # Бот Максим
 
@@ -27,3 +24,9 @@ INTERVALS = [1, 3, 5, 10, 15, 30, 60]
 
 # Путь до user.json
 USERS_JSON_PATH = "/home/dancoder/MemTimeBot/users.json"
+
+# Путь до папки стикеров
+PATH_STICKERS = "/home/dancoder/MemTimeBot/stickers/"
+
+# Стикеры
+WELCOME_STICKER = PATH_STICKERS + "dancing_bird.tgs"  # Стикер с танцующей птицей
