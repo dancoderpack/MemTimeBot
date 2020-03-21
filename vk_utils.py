@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import vk
 import config
 import users_data_controller
