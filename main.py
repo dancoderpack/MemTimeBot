@@ -144,7 +144,7 @@ def threaded_function():
 
         sleep(60)
         minutes_have_passed_since_the_launch += 1
-        bot_log_controller.log_elapsed_time(minutes_have_passed_since_the_launch)
+        # bot_log_controller.log_elapsed_time(minutes_have_passed_since_the_launch)
 
 
 # Запуск бота

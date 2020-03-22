@@ -13,14 +13,15 @@ def get_users():
 def update_user(user_id, interval=-1, counter=-1, chat_id=""):
     users = get_users()
     user = {}
-    if counter != 0 or interval != 0:
+    if user_id in users and user_id != "null":
         user = users[user_id]
-    if counter != -1:
-        user['counter'] = counter
-    if interval != -1:
-        user['interval'] = interval
-    if chat_id != "":
-        user['chat_id'] = chat_id
+    else:
+        if counter != -1:
+            user['counter'] = counter
+        if interval != -1:
+            user['interval'] = interval
+        if chat_id != "":
+            user['chat_id'] = chat_id
     users[user_id] = user
     open(config.USERS_JSON_PATH, 'w').write(json.dumps(users))
 

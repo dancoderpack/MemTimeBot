@@ -17,6 +17,5 @@ def log_add_user_to_db(user_id):
 def log_send_mem(user_id, url):
     send_log_message("Send mem for <{0}>, url: {1}".format(user_id, url))
 
-
-def log_elapsed_time(minutes):
-    send_log_message("{0} minutes have passed since the bot was launched".format(minutes))
+# def log_elapsed_time(minutes):
+# send_log_message("{0} minutes have passed since the bot was launched".format(minutes))
