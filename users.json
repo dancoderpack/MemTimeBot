@@ -1,17 +1,1 @@
-{
-  "artyoomka": {
-    "counter": 25,
-    "chat_id": 633181627,
-    "interval": 60
-  },
-  "Nevada_Wolf": {
-    "counter": 29,
-    "chat_id": 365188536,
-    "interval": 30
-  },
-  "dancoderpack": {
-    "counter": 44,
-    "chat_id": 338290669,
-    "interval": 60
-  }
-}
+{"artyoomka": {"counter": 25, "chat_id": 633181627, "interval": 60}, "Nevada_Wolf": {"counter": 29, "chat_id": 365188536, "interval": 30}, "null": {"counter": 0, "chat_id": 302012408, "interval": 0}, "null": {"interval": 1}, "dancoderpack": {"counter": 44, "chat_id": 338290669, "interval": 60}}
